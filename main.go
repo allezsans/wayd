@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"os"
 	"log"
+	"os"
 
 	"github.com/nlopes/slack"
 )
@@ -13,9 +13,9 @@ func main() {
 	api := slack.New(token)
 	logger := log.New(os.Stdout, "slack-bot: ", log.Lshortfile|log.LstdFlags)
 	slack.SetLogger(logger)
-	
+
 	var (
-		statusText string
+		statusText  string
 		statusEmoji string
 	)
 
